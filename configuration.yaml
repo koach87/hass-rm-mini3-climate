@@ -1,0 +1,34 @@
+# # Loads default set of integrations. Do not remove.
+# default_config:
+
+# # use python script
+# python_script:
+
+# # Text to speech
+# tts:
+#   - platform: google_translate
+
+# automation: !include automations.yaml
+# script: !include scripts.yaml
+# scene: !include scenes.yaml
+
+# var:
+#   fan_now_state:
+#     friendly_name: 'fan_now_state'
+#     initial_value: False
+#     icon: mdi:fan
+
+# #  packages
+# homeassistant:
+#   # customize: !include chimei_fan.yaml
+#   packages: !include_dir_named packages
+  
+smartir:
+  check_updates: false
+  
+climate:
+  - platform: smartir
+    name: AC
+    unique_id: office_ac
+    device_code: 7777
+    controller_data: remote.rm_mini3_remote
